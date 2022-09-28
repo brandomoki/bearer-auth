@@ -79,7 +79,7 @@ describe('Auth Router', () => {
   it('basic fails with unknown user', async () => {
 
     const response = await mockRequest.post('/signin')
-      .auth('nobody', 'xyz')
+      .auth('nobody', 'xyz');
     const { user, token } = response.body;
 
     expect(response.status).toBe(403);
